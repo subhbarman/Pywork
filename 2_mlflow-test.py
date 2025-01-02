@@ -37,7 +37,7 @@ def train_and_log_model(model):
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
         accuracy = accuracy_score(y_test, y_pred)
-        print(f"Accuracy for {model.__class__.__name__}: {accuracy}")
+        print(f"Accuracy for subh {model.__class__.__name__}: {accuracy}")
 
         mlflow.log_params(
             {param: value for param, value in model.get_params().items()})
